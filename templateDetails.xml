@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
+<install version="1.5" type="template">
+	<name>Lord Of Templates</name>
+	<creationDate>20 Ottobre 2009</creationDate>
+	<author>Vito Tafuni</author>
+	<authorEmail>vito@vitotafuni.com</authorEmail>
+	<authorUrl>http://www.vitotafuni.com</authorUrl>
+	<copyright>Copyright 2009 - Vito Tafuni</copyright>
+	<license>Creative Commons Attribution-ShareAlike 2.5</license>
+	<version>1.0.0</version>
+	<description>this template for Joomla 1.5 is made by Vito Tafuni</description>
+	<files>
+		<filename>/css/structure.css</filename>
+		<filename>/css/style.css</filename>
+		<filename>/css/typography.css</filename>
+		<filename>/favicon.ico</filename>
+		<filename>/html/com_content/article/default.php</filename>
+		<filename>/html/com_content/article/index.html</filename>
+		<filename>/html/com_content/category/blog_item.php</filename>
+		<filename>/html/com_content/category/blog.php</filename>
+		<filename>/html/com_content/category/index.html</filename>
+		<filename>/html/com_content/frontpage/default_item.php</filename>
+		<filename>/html/com_content/frontpage/index.html</filename>
+		<filename>/html/com_content/index.html</filename>
+		<filename>/html/com_content/section/blog_item.php</filename>
+		<filename>/html/com_content/section/index.html</filename>
+		<filename>/html/index.html</filename>
+		<filename>/html/mod_banners/default.php</filename>
+		<filename>/html/mod_banners/index.html</filename>
+		<filename>/html/mod_login/default.php</filename>
+		<filename>/html/mod_login/index.html</filename>
+		<filename>/html/modules.php</filename>
+		<filename>/html/pagination.php</filename>
+		<filename>/images/header.php</filename>
+		<filename>/index.php</filename>
+		<filename>/params.ini</filename>
+		<filename>/scripts/mootools.js</filename>
+		<filename>/scripts/sifr/changelog.txt</filename>
+		<filename>/scripts/sifr/css/sifr.css</filename>
+		<filename>/scripts/sifr/demo/all.css</filename>
+		<filename>/scripts/sifr/demo/cochin.swf</filename>
+		<filename>/scripts/sifr/demo/index.html</filename>
+		<filename>/scripts/sifr/demo/index.xhtml</filename>
+		<filename>/scripts/sifr/demo/rockwell.swf</filename>
+		<filename>/scripts/sifr/flash/Options.as</filename>
+		<filename>/scripts/sifr/flash/sIFR.as</filename>
+		<filename>/scripts/sifr/flash/sifr.fla</filename>
+		<filename>/scripts/sifr/flash/SifrStyleSheet.as</filename>
+		<filename>/scripts/sifr/js/sifr-config.js</filename>
+		<filename>/scripts/sifr/js/sifr-config.js.old</filename>
+		<filename>/scripts/sifr/js/sifr-debug.js</filename>
+		<filename>/scripts/sifr/js/sifr.js</filename>
+		<filename>/scripts/sifr/js/source/sifr.js</filename>
+		<filename>/template_thumbnail.png</filename>	
+		<filename>/copyright.txt</filename>	
+	</files>
+	<positions>
+		<position>header</position>
+		<position>left</position>
+		<position>left2</position>
+		<position>top</position>
+		<position>center-top</position>
+		<position>center-bottom</position>
+		<position>bottom</position>
+		<position>right</position>
+		<position>right2</position>
+		<position>footer</position>
+	</positions>
+	<params addpath="/templates/LOT/elements">
+		<param name="header" type="radio" label="Show Header" deafult="1" description="Show/Hide header.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="left" type="radio" label="Show Left" deafult="1" description="Show/Hide Left.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="left2" type="radio" label="Show Left2" deafult="1" description="Show/Hide Left2.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="top" type="radio" label="Show Top" deafult="1" description="Show/Hide Top.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="bottom" type="radio" label="Show Bottom" deafult="1" description="Show/Hide Bottom.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="right" type="radio" label="Show Right" deafult="1" description="Show/Hide Right.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="right2" type="radio" label="Show Right2" deafult="1" description="Show/Hide Right2.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="footer" type="radio" label="Show Footer" deafult="1" description="Show/Hide Footer.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="mootools" type="radio" label="Enable Mootools" deafult="0" description="Enable/Disable custom Mootools library.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="sifr" type="radio" label="Enable Sifr" deafult="0" description="Enable/Disable sifr fonts.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+	</params>
+
+</install>
+

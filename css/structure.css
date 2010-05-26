@@ -1,0 +1,40 @@
+#lot_message {}
+
+#lot_container {}
+
+
+#lot_header{}
+
+#lot_body{}
+
+
+#lot_left, #lot_center, #lot_right {float:left;}
+#lot_left{}
+#lot_left #lot_left1, #lot_left #lot_left2 {float:left}
+#lot_left #lot_left1{}
+#lot_left #lot_left2{}
+
+#lot_center{}
+
+
+#lot_top{}
+
+#lot_content{}
+
+#lot_bottom{}
+
+
+
+#lot_right{}
+#lot_right #lot_right1, #lot_right #lot_right2 {float:left}
+#lot_right #lot_right1{}
+#lot_right #lot_right2{}
+
+
+#lot_footer{}
+
+
+#lot_debug {}
+
+
+
