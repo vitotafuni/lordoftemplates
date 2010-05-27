@@ -12,7 +12,13 @@ the copyright statement in `sifr.js` is kept intact.
 // Make an object pointing to the location of the Flash movie on your web server.
 // Try using the font name as the variable name, makes it easy to remember which
 // object you're using. As an example in this file, we'll use Futura.
-var futura = { src: '/path/to/futura.swf' };
+var typestar_black = {
+	src: '/templates/lordoftemplates/scripts/sifr/fonts/typestar_black.swf'
+};
+
+var typestar_ocr = {
+	src: '/templates/lordoftemplates/scripts/sifr/fonts/typestar_ocr.swf'
+};
 
 // Now you can set some configuration settings.
 // See also <http://wiki.novemberborn.net/sifr3/JavaScript+Configuration>.
@@ -22,7 +28,9 @@ var futura = { src: '/path/to/futura.swf' };
 // sIFR.useStyleCheck = true;
 
 // Next, activate sIFR:
-sIFR.activate(futura);
+sIFR.forceTextTransform = true;
+sIFR.activate(typestar_black);
+sIFR.activate(typestar_ocr);
 
 // If you want, you can use multiple movies, like so:
 //
@@ -50,7 +58,19 @@ sIFR.activate(futura);
 // is styled via the `.sIFR-root` class. Here we've specified `background-color`
 // of the entire Flash movie to be a light grey, and the `color` of the text to
 // be red. Read more about styling at <http://wiki.novemberborn.net/sifr3/Styling>.
-sIFR.replace(futura, {
-  selector: 'h1',
-  css: '.sIFR-root { background-color: #F9F9F9; color: #FF0000; }'
+
+sIFR.replace(typestar_black, {
+    selector: '#lot_center h1, .module h3'
+    ,css: ['.sIFR-root {color:#000000; font-size:17px; text-weight:bold;}']
+	,wmode: 'transparent'
+});
+
+sIFR.replace(typestar_ocr, {
+    selector: 'none'
+    ,css: ['.sIFR-root {color:#000000; font-size:11px;}'
+        ,'a {text-decoration: none; text-transform: uppercase; }'
+        ,'a:link { color: #000000; }'
+        ,'a:hover { color: #ffffff; background-color:#000000; }'
+      ]
+	,wmode: 'transparent'
 });
