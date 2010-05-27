@@ -1,7 +1,8 @@
 <?php // no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
+<div class="article<?php echo $this->params->get('pageclass_sfx')?>">
 <?php if ($this->params->get('show_page_title', 1) && $this->params->get('page_title') != $this->article->title) : ?>
-<div class="componentheading<?php echo $this->params->get('pageclass_sfx')?>"><?php echo $this->escape($this->params->get('page_title')); ?></div>
+<div class="componentheading"><?php echo $this->escape($this->params->get('page_title')); ?></div>
 <?php endif; ?>
 <?php if (($this->user->authorize('com_content', 'edit', 'content', 'all') || $this->user->authorize('com_content', 'edit', 'content', 'own')) && !$this->print) : ?>
 	<div class="contentpaneopen_edit<?php echo $this->params->get( 'pageclass_sfx' ); ?>" >
@@ -128,6 +129,5 @@ if (
 		<?php echo JText::_( 'Last Updated' ); ?> ( <?php echo JHTML::_('date', $this->article->modified, JText::_('DATE_FORMAT_LC2')); ?> )
 	</span>
 <?php endif; ?>
-
-<span class="article_separator">&nbsp;</span>
+</div>
 <?php echo $this->article->event->afterDisplayContent; ?>
