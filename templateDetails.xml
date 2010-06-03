@@ -11,6 +11,7 @@
 	<version>1.0.0</version>
 	<description>this template for Joomla 1.5 is made by Vito Tafuni</description>
 	<files>
+		<filename>/copyright.txt</filename>
 		<filename>/css/structure.css</filename>
 		<filename>/css/style.css</filename>
 		<filename>/css/typography.css</filename>
@@ -19,8 +20,11 @@
 		<filename>/html/com_content/article/index.html</filename>
 		<filename>/html/com_content/category/blog_item.php</filename>
 		<filename>/html/com_content/category/blog.php</filename>
+		<filename>/html/com_content/category/default_items.php</filename>
+		<filename>/html/com_content/category/default.php</filename>
 		<filename>/html/com_content/category/index.html</filename>
 		<filename>/html/com_content/frontpage/default_item.php</filename>
+		<filename>/html/com_content/frontpage/default.php</filename>
 		<filename>/html/com_content/frontpage/index.html</filename>
 		<filename>/html/com_content/index.html</filename>
 		<filename>/html/com_content/section/blog_item.php</filename>
@@ -38,22 +42,19 @@
 		<filename>/scripts/mootools.js</filename>
 		<filename>/scripts/sifr/changelog.txt</filename>
 		<filename>/scripts/sifr/css/sifr.css</filename>
-		<filename>/scripts/sifr/demo/all.css</filename>
-		<filename>/scripts/sifr/demo/cochin.swf</filename>
-		<filename>/scripts/sifr/demo/index.html</filename>
-		<filename>/scripts/sifr/demo/index.xhtml</filename>
-		<filename>/scripts/sifr/demo/rockwell.swf</filename>
+		<filename>/scripts/sifr/flash/aspect.swf</filename>
+		<filename>/scripts/sifr/flash/cochin.swf</filename>
 		<filename>/scripts/sifr/flash/Options.as</filename>
+		<filename>/scripts/sifr/flash/rockwell.swf</filename>
 		<filename>/scripts/sifr/flash/sIFR.as</filename>
 		<filename>/scripts/sifr/flash/sifr.fla</filename>
 		<filename>/scripts/sifr/flash/SifrStyleSheet.as</filename>
+		<filename>/scripts/sifr/fonts/cochin.swf</filename>
+		<filename>/scripts/sifr/fonts/rockwell.swf</filename>
 		<filename>/scripts/sifr/js/sifr-config.js</filename>
-		<filename>/scripts/sifr/js/sifr-config.js.old</filename>
 		<filename>/scripts/sifr/js/sifr-debug.js</filename>
 		<filename>/scripts/sifr/js/sifr.js</filename>
-		<filename>/scripts/sifr/js/source/sifr.js</filename>
-		<filename>/template_thumbnail.png</filename>	
-		<filename>/copyright.txt</filename>	
+		<filename>/template_thumbnail.png</filename>
 	</files>
 	<positions>
 		<position>header</position>
