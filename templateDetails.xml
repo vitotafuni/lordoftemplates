@@ -77,7 +77,11 @@
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		<param name="left2" type="radio" label="Show Left2" deafult="1" description="Show/Hide Left2.">
+		<param name="left2" type="radio" label="Enable Left2" deafult="1" description="Show/Hide Left2.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="fluid_left" type="radio" label="Fluid layout for Left" deafult="0" description="Apply fluid layout on Left.">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
@@ -93,7 +97,11 @@
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		<param name="right2" type="radio" label="Show Right2" deafult="1" description="Show/Hide Right2.">
+		<param name="right2" type="radio" label="Enable Right2" deafult="1" description="Show/Hide Right2.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="fluid_right" type="radio" label="Fluid layout for Right" deafult="0" description="Apply fluid layout on Right.">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>

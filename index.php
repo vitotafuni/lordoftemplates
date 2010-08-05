@@ -1,6 +1,7 @@
 <?php
 /**
  * This work is licensed under the Creative Commons Attribution-ShareAlike 2.5 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/2.5/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+ * author: Vito Tafuni
  */
 
 defined('_JEXEC') or die('Restricted access');
@@ -50,16 +51,17 @@ if ($this->countModules('style')) :?>
 	if( ( $footer=$this->params->get( 'footer' )) || $header ): ?>
 		<div id="lot_body">
 	<?php endif;
-		if( ( $left=$this->params->get( 'left' )) ): ?>
+		if(	$left=$this->params->get( 'left' ) && $show_left=(!$this->params->get( 'fluid_left' ) || $this->countModules( 'left or left2' )) ): ?>
 			<div id="lot_left">
-			<?php if( $this->params->get( 'left2' ) ): ?>						
+			<?php if( $this->params->get( 'left2' )  ): ?>
 				<div id="lot_left1"><jdoc:include type="modules" name="left" style="rounded" /></div>
 				<div id="lot_left2"><jdoc:include type="modules" name="left2" style="rounded" /></div>
 			<?php else: ?>
-				<jdoc:include type="modules" name="left" style="rounded" />
+				<jdoc:include type="modules" name="left" style="rounded" />				
 			<?php endif; ?>
 			</div>
 		<?php endif;
+		$show_right=(!$this->params->get( 'fluid_right' ) || $this->countModules( 'right or right2' ));
 		if( ($right=$this->params->get( 'right' )) || $left ): ?>
 			<div id="lot_center">
 		<?php endif;
@@ -81,7 +83,7 @@ if ($this->countModules('style')) :?>
 		if( $left || $right ): ?>
 			</div>
 		<?php endif;
-			if( $right ): ?>
+			if( $right && $show_right ): ?>
 			<div id="lot_right">
 			<?php if( $this->params->get( 'right2' )): ?>						
 				<div id="lot_right1"><jdoc:include type="modules" name="right" style="rounded" /></div>
