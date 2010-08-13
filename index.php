@@ -63,7 +63,7 @@ if ($this->countModules('style')) :?>
 		<?php endif;
 		$show_right=(!$this->params->get( 'fluid_right' ) || $this->countModules( 'right or right2' ));
 		if( ($right=$this->params->get( 'right' )) || $left ): ?>
-			<div id="lot_center">
+			<div id="lot_center" class="<?php echo $show_right? ($show_left? "":"no_left"):($show_left? "no_right":"no_both") ?>">
 		<?php endif;
 			if( ($top=$this->params->get( 'top' )) ): ?>
 				<div id="lot_top"><jdoc:include type="modules" name="top" style="rounded" /></div>
