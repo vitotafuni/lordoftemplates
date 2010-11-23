@@ -1,4 +1,5 @@
 <?php
+	header("Content-type: text/css"); 
 	/*
 	* The dynamic css gives you the possibility to play with css
 	* using some server-side calculated variables
