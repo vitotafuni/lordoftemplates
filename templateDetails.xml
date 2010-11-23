@@ -69,6 +69,7 @@
 		<position>footer</position>
 	</positions>
 	<params addpath="/templates/LOT/elements">
+		<param type="spacer" default="Template Structure" />
 		<param name="header" type="radio" label="Show Header" deafult="1" description="Show/Hide header.">
 			<option value="1">yes</option>
 			<option value="0">no</option>
@@ -109,6 +110,16 @@
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
+		<param type="spacer" default="Advanced parameters" />
+		<param name="dynamic_css" type="radio" label="Enable Dynamic CSS" deafult="0" description="Enable/Disable a special CSS with server-side calculation.">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param> 
+		<param name="container_back" type="radio" label="Enable container background" deafult="0" description="Enable/Disable a background module position for the main container">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param> 
+		<param type="spacer" default="External libraries" />
 		<param name="mootools" type="radio" label="Enable Mootools" deafult="0" description="Enable/Disable custom Mootools library.">
 			<option value="1">yes</option>
 			<option value="0">no</option>

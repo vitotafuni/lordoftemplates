@@ -23,7 +23,10 @@ $path = $this->baseurl.'/templates/'.$this->template;?>
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" href="<?php echo $path ?>/css/ie.css" type="text/css" media="all"/>
 	<![endif]-->
-	
+<?php if( $this->params->get( 'dynamic_css' )): ?>
+	<link rel="stylesheet" href="<?php echo $path ?>/css/dynamic.css" type="text/css" media="all"/>
+<?php endif;?>
+
 	<link rel="icon" type="image/gif" href="<?php echo $path ?>/favicon_animato.gif" >
 
 <?php if( $this->params->get( 'sifr' )): ?>
@@ -45,7 +48,11 @@ if ($this->countModules('style')) :?>
 <body>
 	<div id="lot_message"><jdoc:include type="message" /></div>
 	<div id="lot_container">
-	<?php if( ( $header=$this->params->get( 'header' )) ): ?>
+	<?php if( ($container_back=$this->params->get( 'container_back' )) ): ?>
+		<div id="lot_container_back"><jdoc:include type="modules" name="container_back" style="rounded" /></div>
+		<div id="lot_container_inner">
+	<?php endif;
+	if( ( $header=$this->params->get( 'header' )) ): ?>
 		<div id="lot_header"><jdoc:include type="modules" name="header" style="rounded" /></div>
 	<?php endif;
 	if( ( $footer=$this->params->get( 'footer' )) || $header ): ?>
@@ -96,6 +103,9 @@ if ($this->countModules('style')) :?>
 		</div>
 	<?php if( $footer ): ?>
 		<div id="lot_footer"><jdoc:include type="modules" name="footer" style="rounded" /></div>
+	<?php endif; 
+		if( $container_back ): ?>
+		</div>
 	<?php endif; ?>
 	</div>
 	<div id="lot_debug"><jdoc:include type="modules" name="debug" /></div>
