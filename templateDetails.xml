@@ -11,7 +11,8 @@
 	<version>1.1.0</version>
 	<description>this template for Joomla 1.5 is made by Vito Tafuni</description>
 	<files>
-		<filename>/copyright.txt</filename>
+		<filename>/css/dynamic.php</filename>
+		<filename>/css/.htaccess</filename>
 		<filename>/css/structure.css</filename>
 		<filename>/css/style.css</filename>
 		<filename>/css/typography.css</filename>
@@ -37,8 +38,11 @@
 		<filename>/html/modules.php</filename>
 		<filename>/html/pagination.php</filename>
 		<filename>/images/header.php</filename>
+		<filename>/images/lines.php</filename>
+		<filename>/images/.htaccess</filename>		
 		<filename>/index.php</filename>
 		<filename>/params.ini</filename>
+		<filename>/README.txt</filename>
 		<filename>/scripts/mootools.js</filename>
 		<filename>/scripts/sifr/changelog.txt</filename>
 		<filename>/scripts/sifr/css/sifr.css</filename>
@@ -67,6 +71,7 @@
 		<position>right</position>
 		<position>right2</position>
 		<position>footer</position>
+		<position>container_back</position>
 	</positions>
 	<params addpath="/templates/LOT/elements">
 		<param type="spacer" default="Template Structure" />
