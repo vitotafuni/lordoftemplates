@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^dynamic.css$ dynamic.php [L]
