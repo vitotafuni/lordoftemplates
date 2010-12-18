@@ -15,7 +15,7 @@
 	
 	$ip=explode('.',$_SERVER['REMOTE_ADDR']);
 	
-	$color = getRGB($ip[3]);
+	$color = getRGB($ip[2]);
 
 ?>
 
