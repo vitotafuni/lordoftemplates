@@ -1,7 +1,7 @@
 <?php
 /**
- * This work is licensed under the Creative Commons Attribution-ShareAlike 2.5 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/2.5/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
- * author: Vito Tafuni
+ * Copyright (c) 2010 - Vito Tafuni - www.vitotafuni.com
+ * licence: http://www.opensource.org/licenses/mit-license.php
  */
 
 defined('_JEXEC') or die('Restricted access');
@@ -46,13 +46,13 @@ if ($this->countModules('style')) :?>
 </head>
 
 <body>
+<?php if( ($background=$this->params->get( 'background' )) ): ?>
+	<div id="lot_background"><jdoc:include type="modules" name="background" style="rounded" /></div>
+	<div id="lot_container_inner">
+<?php endif;?>
 	<div id="lot_message"><jdoc:include type="message" /></div>
 	<div id="lot_container">
-	<?php if( ($container_back=$this->params->get( 'container_back' )) ): ?>
-		<div id="lot_container_back"><jdoc:include type="modules" name="container_back" style="rounded" /></div>
-		<div id="lot_container_inner">
-	<?php endif;
-	if( ( $header=$this->params->get( 'header' )) ): ?>
+	<?php if( ( $header=$this->params->get( 'header' )) ): ?>
 		<div id="lot_header"><jdoc:include type="modules" name="header" style="rounded" /></div>
 	<?php endif;
 	if( ( $footer=$this->params->get( 'footer' )) || $header ): ?>
@@ -90,7 +90,7 @@ if ($this->countModules('style')) :?>
 		if( $left || $right ): ?>
 			</div>
 		<?php endif;
-			if( $right && $show_right ): ?>
+		if( $right && $show_right ): ?>
 			<div id="lot_right">
 			<?php if( $this->params->get( 'right2' )): ?>						
 				<div id="lot_right1"><jdoc:include type="modules" name="right" style="rounded" /></div>
@@ -99,15 +99,17 @@ if ($this->countModules('style')) :?>
 				<jdoc:include type="modules" name="right" style="rounded" />
 			<?php endif; ?>
 			</div>
-		<?php endif; ?>
+		<?php endif; 
+	if( $header || $footer ): ?>
 		</div>
-	<?php if( $footer ): ?>
+	<?php endif;
+	if( $footer ): ?>
 		<div id="lot_footer"><jdoc:include type="modules" name="footer" style="rounded" /></div>
-	<?php endif; 
-		if( $container_back ): ?>
-		</div>
 	<?php endif; ?>
 	</div>
 	<div id="lot_debug"><jdoc:include type="modules" name="debug" /></div>
+	<?php if( $background ): ?>
+	</div>
+	<?php endif; ?>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <?php
 /* 
 header random generator 
-By Vito Tafuni - vitotafuni_AT_gmail_DOT_com 
+by Vito Tafuni - vitotafuni_AT_gmail_DOT_com 
+every use is free of charge
 */
 $headers = glob("header*.jpg"); 
 $header = $headers[rand(1,count($headers))-1];
