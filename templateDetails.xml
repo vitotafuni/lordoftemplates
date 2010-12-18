@@ -71,7 +71,7 @@
 		<position>right</position>
 		<position>right2</position>
 		<position>footer</position>
-		<position>container_back</position>
+		<position>background</position>
 	</positions>
 	<params addpath="/templates/LOT/elements">
 		<param type="spacer" default="Template Structure" />
@@ -120,7 +120,7 @@
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param> 
-		<param name="container_back" type="radio" label="Enable container background" deafult="0" description="Enable/Disable a background module position for the main container">
+		<param name="background" type="radio" label="Enable background position" deafult="0" description="Enable/Disable a background module position">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param> 
