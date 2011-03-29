@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
-<install version="1.5" type="template">
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
 	<name>Lord Of Templates</name>
 	<creationDate>20 Ottobre 2009</creationDate>
 	<author>Vito Tafuni</author>
@@ -9,7 +9,7 @@
 	<copyright>Copyright 2009 - Vito Tafuni</copyright>
 	<license>MIT license</license>
 	<version>2.0.0</version>
-	<description>this template for Joomla 1.5 is made by Vito Tafuni</description>
+	<description>this template for Joomla 1.6 is made by Vito Tafuni</description>
 	<files>
 		<filename>/css/dynamic.php</filename>
 		<filename>/css/.htaccess</filename>
@@ -61,57 +61,61 @@
 		<position>background</position>
 		<position>style</position>
 	</positions>
-	<params addpath="/templates/LOT/elements">
-		<param type="spacer" default="Template Structure" />
-		<param name="header" type="radio" label="Show Header" deafult="1" description="Show/Hide header.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="left" type="radio" label="Show Left" deafult="1" description="Show/Hide Left.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="left2" type="radio" label="Enable Left2" deafult="1" description="Show/Hide Left2.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="fluid_left" type="radio" label="Fluid layout for Left" deafult="0" description="Apply fluid layout on Left.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="top" type="radio" label="Show Top" deafult="1" description="Show/Hide Top.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="bottom" type="radio" label="Show Bottom" deafult="1" description="Show/Hide Bottom.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="right" type="radio" label="Show Right" deafult="1" description="Show/Hide Right.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="right2" type="radio" label="Enable Right2" deafult="1" description="Show/Hide Right2.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="fluid_right" type="radio" label="Fluid layout for Right" deafult="0" description="Apply fluid layout on Right.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="footer" type="radio" label="Show Footer" deafult="1" description="Show/Hide Footer.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param type="spacer" default="Advanced parameters" />
-		<param name="dynamic_css" type="radio" label="Enable Dynamic CSS" deafult="0" description="Enable/Disable a special CSS with server-side calculation.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param> 
-		<param name="background" type="radio" label="Enable background position" deafult="0" description="Enable/Disable a background module position">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param> 
-	</params>
-</install>
+	<config>
+		<fields name="params">
+			<fieldset name="structure" label="Template Structure">
+				<field name="header" type="radio" label="Show Header" deafult="1" description="Show/Hide header.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="left" type="radio" label="Show Left" deafult="1" description="Show/Hide Left.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="left2" type="radio" label="Enable Left2" deafult="1" description="Show/Hide Left2.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="fluid_left" type="radio" label="Fluid layout for Left" deafult="0" description="Apply fluid layout on Left.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="top" type="radio" label="Show Top" deafult="1" description="Show/Hide Top.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="bottom" type="radio" label="Show Bottom" deafult="1" description="Show/Hide Bottom.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="right" type="radio" label="Show Right" deafult="1" description="Show/Hide Right.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="right2" type="radio" label="Enable Right2" deafult="1" description="Show/Hide Right2.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="fluid_right" type="radio" label="Fluid layout for Right" deafult="0" description="Apply fluid layout on Right.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="footer" type="radio" label="Show Footer" deafult="1" description="Show/Hide Footer.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+			</fieldset>				
+			<fieldset name="advanced" label="Advanced parameters">
+				<field name="dynamic_css" type="radio" label="Enable Dynamic CSS" deafult="0" description="Enable/Disable a special CSS with server-side calculation.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field> 
+				<field name="background" type="radio" label="Enable background position" deafult="0" description="Enable/Disable a background module position">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field> 
+			</fieldset>
+		</fields>
+	</config>
+</extension>
 
