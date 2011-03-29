@@ -142,24 +142,21 @@ if (($numIntroArticles != $startIntroArticles) && ($i < $this->total)) : ?>
 
 					<div class="td" valign="top" width="<?php echo intval(100 / $this->params->get('num_columns')) ?>%" class="article_column<?php echo $divider ?>">
 
-					<?php for ($y = 0; $y < ($this->params->get('num_intro_articles') / $this->params->get('num_columns')); $y ++) :
+					<?php for ($y = ($z<($this->total % $this->params->get('num_columns')))? -1:0; $y < intval($this->total / $this->params->get('num_columns')); $y ++) :
+						if ($i < $this->total && $i < ($numIntroArticles)) :
 
-					if ($i < $this->total && $i < ($numIntroArticles)) :
+							$this->item =& $this->getItem($i, $this->params);
 
-						$this->item =& $this->getItem($i, $this->params);
+							echo $this->loadTemplate('item');
 
-						echo $this->loadTemplate('item');
+							$i ++;
 
-						$i ++;
-
-					endif;
-
-				endfor; ?>
-
-				</div>
-
-		<?php endfor; 
-
+						endif;
+					endfor;?>
+					
+					</div>
+				<?php endfor;
+ 
 		endif; ?> 
 
 
