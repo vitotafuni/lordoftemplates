@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'TitilliumText22LRegular';
-    src: url('TitilliumText22L003-webfont.eot');
-    src: url('TitilliumText22L003-webfont.eot?iefix') format('eot'),
-         url('TitilliumText22L003-webfont.woff') format('woff'),
-         url('TitilliumText22L003-webfont.ttf') format('truetype'),
-         url('TitilliumText22L003-webfont.svg#webfontiXtJn0Qu') format('svg');
+    src: url('../fonts/TitilliumText22L003-webfont.eot');
+    src: url('../fonts/TitilliumText22L003-webfont.eot?iefix') format('eot'),
+         url('../fonts/TitilliumText22L003-webfont.woff') format('woff'),
+         url('../fonts/TitilliumText22L003-webfont.ttf') format('truetype'),
+         url('../fonts/TitilliumText22L003-webfont.svg#webfontiXtJn0Qu') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -12,11 +12,11 @@
 
 @font-face {
     font-family: 'TitilliumText22LBold';
-    src: url('TitilliumText22L005-webfont.eot');
-    src: url('TitilliumText22L005-webfont.eot?iefix') format('eot'),
-         url('TitilliumText22L005-webfont.woff') format('woff'),
-         url('TitilliumText22L005-webfont.ttf') format('truetype'),
-         url('TitilliumText22L005-webfont.svg#webfontZL0yA7s8') format('svg');
+    src: url('../fonts/TitilliumText22L005-webfont.eot');
+    src: url('../fonts/TitilliumText22L005-webfont.eot?iefix') format('eot'),
+         url('../fonts/TitilliumText22L005-webfont.woff') format('woff'),
+         url('../fonts/TitilliumText22L005-webfont.ttf') format('truetype'),
+         url('../fonts/TitilliumText22L005-webfont.svg#webfontZL0yA7s8') format('svg');
     font-weight: normal;
     font-style: normal;
 
