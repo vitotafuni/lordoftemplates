@@ -7,8 +7,8 @@
 	<authorEmail>vito@vitotafuni.com</authorEmail>
 	<authorUrl>http://www.vitotafuni.com</authorUrl>
 	<copyright>Copyright 2009 - Vito Tafuni</copyright>
-	<license>Creative Commons Attribution-ShareAlike 2.5</license>
-	<version>1.1.0</version>
+	<license>MIT license</license>
+	<version>2.0.0</version>
 	<description>this template for Joomla 1.5 is made by Vito Tafuni</description>
 	<files>
 		<filename>/css/dynamic.php</filename>
@@ -16,7 +16,7 @@
 		<filename>/css/structure.css</filename>
 		<filename>/css/style.css</filename>
 		<filename>/css/typography.css</filename>
-		<filename>/favicon.ico</filename>
+		<filename>/css/index.html</filename>	
 		<filename>/html/com_content/article/default.php</filename>
 		<filename>/html/com_content/article/index.html</filename>
 		<filename>/html/com_content/category/blog_item.php</filename>
@@ -40,24 +40,11 @@
 		<filename>/images/header.php</filename>
 		<filename>/images/lines.php</filename>
 		<filename>/images/.htaccess</filename>		
+		<filename>/images/index.html</filename>	
+		<filename>/favicon.ico</filename>
 		<filename>/index.php</filename>
 		<filename>/params.ini</filename>
 		<filename>/README.txt</filename>
-		<filename>/scripts/mootools.js</filename>
-		<filename>/scripts/sifr/changelog.txt</filename>
-		<filename>/scripts/sifr/css/sifr.css</filename>
-		<filename>/scripts/sifr/flash/aspect.swf</filename>
-		<filename>/scripts/sifr/flash/cochin.swf</filename>
-		<filename>/scripts/sifr/flash/Options.as</filename>
-		<filename>/scripts/sifr/flash/rockwell.swf</filename>
-		<filename>/scripts/sifr/flash/sIFR.as</filename>
-		<filename>/scripts/sifr/flash/sifr.fla</filename>
-		<filename>/scripts/sifr/flash/SifrStyleSheet.as</filename>
-		<filename>/scripts/sifr/fonts/cochin.swf</filename>
-		<filename>/scripts/sifr/fonts/rockwell.swf</filename>
-		<filename>/scripts/sifr/js/sifr-config.js</filename>
-		<filename>/scripts/sifr/js/sifr-debug.js</filename>
-		<filename>/scripts/sifr/js/sifr.js</filename>
 		<filename>/template_thumbnail.png</filename>
 	</files>
 	<positions>
@@ -72,6 +59,7 @@
 		<position>right2</position>
 		<position>footer</position>
 		<position>background</position>
+		<position>style</position>
 	</positions>
 	<params addpath="/templates/LOT/elements">
 		<param type="spacer" default="Template Structure" />
@@ -124,16 +112,6 @@
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param> 
-		<param type="spacer" default="External libraries" />
-		<param name="mootools" type="radio" label="Enable Mootools" deafult="0" description="Enable/Disable custom Mootools library.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="sifr" type="radio" label="Enable Sifr" deafult="0" description="Enable/Disable sifr fonts.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
 	</params>
-
 </install>
 
