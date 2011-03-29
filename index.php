@@ -6,7 +6,9 @@
 
 defined('_JEXEC') or die('Restricted access');
 
-$path = $this->baseurl.'/templates/'.$this->template;?>
+$path = $this->baseurl.'/templates/'.$this->template;
+$full_path = $_SERVER['DOCUMENT_ROOT'].$path;
+?>
 <?php echo '<?xml version="1.0" encoding="utf-8"?'.'>'; ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -16,27 +18,17 @@ $path = $this->baseurl.'/templates/'.$this->template;?>
 	<!--[if lt IE 8]>
 	<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
 	<![endif]-->
-
 	<link rel="stylesheet" href="<?php echo $path ?>/css/structure.css" type="text/css" media="all"/>
 	<link rel="stylesheet" href="<?php echo $path ?>/css/style.css" type="text/css" media="all"/>
 	<link rel="stylesheet" href="<?php echo $path ?>/css/typography.css" type="text/css" media="all"/>
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" href="<?php echo $path ?>/css/ie.css" type="text/css" media="all"/>
-	<![endif]-->
 <?php if( $this->params->get( 'dynamic_css' )): ?>
 	<link rel="stylesheet" href="<?php echo $path ?>/css/dynamic.css" type="text/css" media="all"/>
-<?php endif;?>
-
-	<link rel="icon" type="image/gif" href="<?php echo $path ?>/favicon_animato.gif" >
-
-<?php if( $this->params->get( 'sifr' )): ?>
-	<link rel="stylesheet" href="<?php echo $path ?>/scripts/sifr/css/sifr.css" type="text/css" />
-	<script src="<?php echo $path ?>/scripts/sifr/js/sifr.js" type="text/javascript"></script>
-	<script src="<?php echo $path ?>/scripts/sifr/js/sifr-debug.js" type="text/javascript"></script>
-	<script src="<?php echo $path ?>/scripts/sifr/js/sifr-config.js" type="text/javascript"></script>
 <?php endif;
-if( $this->params->get( 'mootools' )): ?>
-	<script src="<?php echo $path ?>/scripts/mootools.js" type="text/javascript"></script>
+if(file_exists($full_path.'/favicon_anim.gif')): ?>
+	<link rel="icon" type="image/gif" href="<?php echo $path ?>/favicon_anim.gif" >
+<?php endif;
+if(file_exists($full_path.'/favicon_iphone.png')): ?>
+	<link rel="apple-touch-icon" href="<?php echo $path ?>/favicon_iphone.png"/>
 <?php endif;
 if ($this->countModules('style')) :?>
 	<style type="text/css">
