@@ -6,10 +6,10 @@ defined('_JEXEC') or die('Restricted access'); ?>
 		<?php echo JHTML::_('icon.edit', $this->item, $this->item->params, $this->access); ?>
 	</div>
 <?php endif; ?>
-<div class="contentpaneopen<?php echo $this->item->params->get( 'pageclass_sfx' ); ?>">
+<div class="article">
 
 <?php if ($this->item->params->get('show_title')) : ?>
-<h2 class="contentheading<?php echo $this->item->params->get( 'pageclass_sfx' ); ?>">
+<h1 class="contentheading<?php echo $this->item->params->get( 'pageclass_sfx' ); ?>">
 	<?php if ($this->item->params->get('link_titles') && $this->item->readmore_link != '') : ?>
 	<a href="<?php echo $this->item->readmore_link; ?>" class="contentpagetitle<?php echo $this->item->params->get( 'pageclass_sfx' ); ?>">
 		<?php echo $this->escape($this->item->title); ?>
@@ -17,12 +17,28 @@ defined('_JEXEC') or die('Restricted access'); ?>
 	<?php else : ?>
 		<?php echo $this->escape($this->item->title); ?>
 	<?php endif; ?>
-</h2>
+</h1>
 <?php endif; ?>
 
 <?php  if (!$this->item->params->get('show_intro')) :
 	echo $this->item->event->afterDisplayTitle;
 endif; ?>
+
+<div class="article-content">
+<?php if (isset ($this->item->toc)) : ?>
+	<?php echo $this->item->toc; ?>
+<?php endif; ?>
+<?php echo $this->item->text; ?>
+<?php if ($this->item->params->get('show_readmore') && $this->item->readmore) : ?>
+	<a href="<?php echo $this->item->readmore_link; ?>" title="<?php echo $this->item->title; ?>" class="readon">
+			<?php if ($this->item->readmore_register) : ?>
+				<?php echo JText::_('Register to read more...'); ?>
+			<?php else : ?>
+				<?php echo JText::_($this->item->params->get('readmore','Read more...')); ?>
+			<?php endif; ?>
+	</a>
+<?php endif; ?>
+</div>
 
 <?php
 if (
@@ -38,7 +54,7 @@ if (
 
 <?php if ($this->item->params->get('show_create_date')) : ?>
 	<span class="createdate">
-		<?php echo JHTML::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2')); ?>
+		<?php echo JHTML::_('date', $this->item->created, JText::_('DATE_FORMAT_LC1')); ?>
 	</span>
 <?php endif; ?>
 
@@ -58,7 +74,7 @@ if (
 		<?php if ($this->item->params->get('link_section')) : ?>
 			<?php echo '</a>'; ?>
 		<?php endif; ?>
-			<?php if ($this->item->params->get('show_category')) : ?>
+		<?php if ($this->item->params->get('show_category')) : ?>
 			<?php echo ' - '; ?>
 		<?php endif; ?>
 	</span>
@@ -69,7 +85,7 @@ if (
 			<?php echo '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug, $this->item->sectionid)).'">'; ?>
 		<?php endif; ?>
 		<?php echo $this->item->category; ?>
-		<?php if ($this->item->params->get('link_section')) : ?>
+		<?php if ($this->item->params->get('link_category')) : ?>
 			<?php echo '</a>'; ?>
 		<?php endif; ?>
 	</span>
@@ -102,7 +118,8 @@ if (
 <?php if ($this->item->params->get('show_url') && $this->item->urls) : ?>
 	<span class="article-url">
 		<a href="http://<?php echo $this->item->urls ; ?>" target="_blank">
-			<?php echo $this->item->urls; ?></a>
+			<?php echo $this->item->urls; ?>
+		</a>
 	</span>
 <?php endif; ?>
 </div>
@@ -110,12 +127,7 @@ if (
 
 <?php echo $this->item->event->beforeDisplayContent; ?>
 
-<div class="article-content">
-<?php if (isset ($this->item->toc)) : ?>
-	<?php echo $this->item->toc; ?>
-<?php endif; ?>
-<?php echo $this->item->text; ?>
-</div>
+
 
 <?php if ( intval($this->item->modified) != 0 && $this->item->params->get('show_modify_date')) : ?>
 	<span class="modifydate">
@@ -123,17 +135,10 @@ if (
 	</span>
 <?php endif; ?>
 
-<?php if ($this->item->params->get('show_readmore') && $this->item->readmore) : ?>
-	<a href="<?php echo $this->item->readmore_link; ?>" title="<?php echo $this->item->title; ?>" class="readon<?php echo $this->item->params->get('pageclass_sfx'); ?>">
-			<?php if ($this->item->readmore_register) : ?>
-				<?php echo JText::_('Register to read more...'); ?>
-			<?php else : ?>
-				<?php echo JText::_('Read more...'); ?>
-			<?php endif; ?>
-	</a>
-<?php endif; ?>
+
 
 </div>
 
 <span class="article_separator">&nbsp;</span>
 <?php echo $this->item->event->afterDisplayContent; ?>
+
