@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="1.6" type="template" client="site">
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
 	<name>Lord Of Templates</name>
-	<creationDate>20 Ottobre 2009</creationDate>
+	<creationDate>25 Febbraio 2012</creationDate>
 	<author>Vito Tafuni</author>
 	<authorEmail>vito@vitotafuni.com</authorEmail>
 	<authorUrl>http://www.vitotafuni.com</authorUrl>
 	<copyright>Copyright 2009 - Vito Tafuni</copyright>
 	<license>MIT license</license>
-	<version>2.0.0</version>
-	<description>this template for Joomla 1.6 is made by Vito Tafuni</description>
+	<version>2.1.0</version>
+	<description>this template for Joomla 2.5 is made by Vito Tafuni</description>
 	<files>
 		<filename>/css/dynamic.php</filename>
 		<filename>/css/.htaccess</filename>
