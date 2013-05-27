@@ -9,6 +9,10 @@
 // no direct access
 defined('_JEXEC') or die;
 
+function modChrome_contentonly($module, &$params, &$attribs) { 
+	echo  preg_replace("|<div[^>]*>(.*)</div>|s","$1",$module->content,1);
+}
+
 
 /*
  * Module chrome that allows for rounded corners by wrapping in nested div tags

@@ -32,20 +32,20 @@ if(file_exists($full_path.'/favicon_iphone.png')): ?>
 <?php endif;
 if ($this->countModules('style')) :?>
 	<style type="text/css">
-		<jdoc:include type="modules" name="style" />
+		<jdoc:include type="modules" name="style" style="contentonly"/>
 	</style>
 <?php endif ?>
 </head>
 
 <body>
 <?php if( ($background=$this->params->get( 'background' )) ): ?>
-	<div id="lot_background"><jdoc:include type="modules" name="background" style="rounded" /></div>
+	<div id="lot_background"><jdoc:include type="modules" name="background" style="xhtml" /></div>
 	<div id="lot_container_inner">
 <?php endif;?>
 	<div id="lot_message"><jdoc:include type="message" /></div>
 	<div id="lot_container">
 	<?php if( ( $header=$this->params->get( 'header' )) ): ?>
-		<div id="lot_header"><jdoc:include type="modules" name="header" style="rounded" /></div>
+		<div id="lot_header"><jdoc:include type="modules" name="header" style="xhtml" /></div>
 	<?php endif;
 	if( ( $footer=$this->params->get( 'footer' )) || $header ): ?>
 		<div id="lot_body">
@@ -53,10 +53,10 @@ if ($this->countModules('style')) :?>
 		if(	$left=$this->params->get( 'left' ) && $show_left=(!$this->params->get( 'fluid_left' ) || $this->countModules( 'left or left2' )) ): ?>
 			<div id="lot_left">
 			<?php if( $this->params->get( 'left2' )  ): ?>
-				<div id="lot_left1"><jdoc:include type="modules" name="left" style="rounded" /></div>
-				<div id="lot_left2"><jdoc:include type="modules" name="left2" style="rounded" /></div>
+				<div id="lot_left1"><jdoc:include type="modules" name="left" style="xhtml" /></div>
+				<div id="lot_left2"><jdoc:include type="modules" name="left2" style="xhtml" /></div>
 			<?php else: ?>
-				<jdoc:include type="modules" name="left" style="rounded" />				
+				<jdoc:include type="modules" name="left" style="xhtml" />				
 			<?php endif; ?>
 			</div>
 		<?php endif;
@@ -65,19 +65,19 @@ if ($this->countModules('style')) :?>
 			<div id="lot_center" class="<?php echo $show_right? ($show_left? "":"no_left"):($show_left? "no_right":"no_both") ?>">
 		<?php endif;
 			if( ($top=$this->params->get( 'top' )) ): ?>
-				<div id="lot_top"><jdoc:include type="modules" name="top" style="rounded" /></div>
+				<div id="lot_top"><jdoc:include type="modules" name="top" style="xhtml" /></div>
 			<?php endif;
 				if( ($bottom=$this->params->get( 'bottom' )) || $top ): ?>
 					<div id="lot_content">
 				<?php endif; ?>
-						<jdoc:include type="modules" name="center-top" style="rounded" />
+						<jdoc:include type="modules" name="center-top" style="xhtml" />
 						<jdoc:include type="component" />
-						<jdoc:include type="modules" name="center-bottom" style="rounded" />
+						<jdoc:include type="modules" name="center-bottom" style="xhtml" />
 				<?php if( $top || $bottom ) : ?>
 					</div>
 				<?php endif; 
 			if( $bottom ): ?>
-				<div id="lot_bottom"><jdoc:include type="modules" name="bottom" style="rounded" /></div>
+				<div id="lot_bottom"><jdoc:include type="modules" name="bottom" style="xhtml" /></div>
 			<?php endif; 
 		if( $left || $right ): ?>
 			</div>
@@ -85,10 +85,10 @@ if ($this->countModules('style')) :?>
 		if( $right && $show_right ): ?>
 			<div id="lot_right">
 			<?php if( $this->params->get( 'right2' )): ?>						
-				<div id="lot_right1"><jdoc:include type="modules" name="right" style="rounded" /></div>
-				<div id="lot_right2"><jdoc:include type="modules" name="right2" style="rounded" /></div>
+				<div id="lot_right1"><jdoc:include type="modules" name="right" style="xhtml" /></div>
+				<div id="lot_right2"><jdoc:include type="modules" name="right2" style="xhtml" /></div>
 			<?php else: ?>
-				<jdoc:include type="modules" name="right" style="rounded" />
+				<jdoc:include type="modules" name="right" style="xhtml" />
 			<?php endif; ?>
 			</div>
 		<?php endif; 
@@ -96,7 +96,7 @@ if ($this->countModules('style')) :?>
 		</div>
 	<?php endif;
 	if( $footer ): ?>
-		<div id="lot_footer"><jdoc:include type="modules" name="footer" style="rounded" /></div>
+		<div id="lot_footer"><jdoc:include type="modules" name="footer" style="xhtml" /></div>
 	<?php endif; ?>
 	</div>
 	<div id="lot_debug"><jdoc:include type="modules" name="debug" /></div>
