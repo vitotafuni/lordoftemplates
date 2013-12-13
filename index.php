@@ -14,6 +14,13 @@ $full_path = $_SERVER['DOCUMENT_ROOT'].$path;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../media/jui/js/jquery.js"></script>
+	<script src="../media/jui/js/bootstrap.min.js"></script>
+	<script src="../media/jui/js/chosen.jquery.min.js"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+	</script>
 	<jdoc:include type="head" />
 	<!--[if lt IE 8]>
 	<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
@@ -34,6 +41,20 @@ if ($this->countModules('style')) :?>
 	<style type="text/css">
 		<jdoc:include type="modules" name="style" style="contentonly"/>
 	</style>
+<?php
+	// If Right-to-Left
+	if ($this->direction == 'rtl') :
+	    $doc->addStyleSheet('../media/jui/css/bootstrap-rtl.css');
+	endif;
+	 
+	// Load specific language related CSS
+	$file = 'language/' . $lang->getTag() . '/' . $lang->getTag() . '.css';
+	if (JFile::exists($file)) :
+	    $doc->addStyleSheet($file);
+	endif;
+ 
+	$doc->addStyleSheet('../media/jui/css/chosen.css');
+?>
 <?php endif ?>
 </head>
 
