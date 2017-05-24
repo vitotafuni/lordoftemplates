@@ -1,4 +1,4 @@
-Copyright (c) 2010 - Vito Tafuni - www.vitotafuni.com
+Copyright (c) 2017 - Vito Tafuni - www.tapecode.it
 
 All files in this project are covered by the MIT licence except of third party libraries that are covered by their own licences.
 

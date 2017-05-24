@@ -1,53 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
-<install version="1.5" type="template">
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
 	<name>Lord Of Templates</name>
-	<creationDate>20 Ottobre 2009</creationDate>
+	<creationDate>25 maggio 2017</creationDate>
 	<author>Vito Tafuni</author>
-	<authorEmail>vito@vitotafuni.com</authorEmail>
-	<authorUrl>http://www.vitotafuni.com</authorUrl>
-	<copyright>Copyright 2009 - Vito Tafuni</copyright>
+	<authorEmail>vitotafuni@tapecode.it</authorEmail>
+	<authorUrl>http://www.tapecode.it</authorUrl>
+	<copyright>Copyright 2017 - Vito Tafuni</copyright>
 	<license>MIT license</license>
-	<version>2.0.0</version>
-	<description>this template for Joomla 1.5 is made by Vito Tafuni</description>
+	<version>2.1.0</version>
+	<description>this template for Joomla 2.5 is made by Vito Tafuni at Tapecode</description>
 	<files>
-		<filename>/css/dynamic.php</filename>
-		<filename>/css/.htaccess</filename>
-		<filename>/css/structure.css</filename>
-		<filename>/css/style.css</filename>
-		<filename>/css/typography.css</filename>
-		<filename>/css/index.html</filename>	
-		<filename>/html/com_content/article/default.php</filename>
-		<filename>/html/com_content/article/index.html</filename>
-		<filename>/html/com_content/category/blog_item.php</filename>
-		<filename>/html/com_content/category/blog.php</filename>
-		<filename>/html/com_content/category/default_items.php</filename>
-		<filename>/html/com_content/category/default.php</filename>
-		<filename>/html/com_content/category/index.html</filename>
-		<filename>/html/com_content/frontpage/default_item.php</filename>
-		<filename>/html/com_content/frontpage/default.php</filename>
-		<filename>/html/com_content/frontpage/index.html</filename>
-		<filename>/html/com_content/index.html</filename>
-		<filename>/html/com_content/section/blog_item.php</filename>
-		<filename>/html/com_content/section/index.html</filename>
-		<filename>/html/index.html</filename>
-		<filename>/html/mod_banners/default.php</filename>
-		<filename>/html/mod_banners/index.html</filename>
-		<filename>/html/mod_login/default.php</filename>
-		<filename>/html/mod_login/index.html</filename>
-		<filename>/html/modules.php</filename>
-		<filename>/html/pagination.php</filename>
-		<filename>/images/header.php</filename>
-		<filename>/images/lines.php</filename>
-		<filename>/images/.htaccess</filename>		
-		<filename>/images/index.html</filename>	
-		<filename>/favicon.ico</filename>
-		<filename>/index.php</filename>
-		<filename>/params.ini</filename>
-		<filename>/README.txt</filename>
-		<filename>/template_thumbnail.png</filename>
+		<filename>/component.php</filename>
+        <filename>/css</filename>
+        <filename>/css/.htaccess</filename>
+        <filename>/css/dynamic.php</filename>
+        <filename>/css/index.html</filename>
+        <filename>/css/sidebar.css</filename>
+        <filename>/css/structure.css</filename>
+        <filename>/css/style.css</filename>
+        <filename>/css/typography.css</filename>
+        <filename>/error.php</filename>
+        <filename>/html/index.html</filename>
+        <filename>/html/mod_cmp_blank/default.php</filename>
+        <filename>/html/mod_menu/default.php</filename>
+        <filename>/html/mod_menu/listForNavbar.php</filename>
+        <filename>/html/modules.php</filename>
+        <filename>/html/pagination.php</filename>
+        <filename>/html/renderer_head.php</filename>
+        <filename>/images/.htaccess</filename>
+        <filename>/images/favicon/apple-touch-icon-114x114.png</filename>
+        <filename>/images/favicon/apple-touch-icon-120x120.png</filename>
+        <filename>/images/favicon/apple-touch-icon-144x144.png</filename>
+        <filename>/images/favicon/apple-touch-icon-152x152.png</filename>
+        <filename>/images/favicon/apple-touch-icon-57x57.png</filename>
+        <filename>/images/favicon/apple-touch-icon-60x60.png</filename>
+        <filename>/images/favicon/apple-touch-icon-72x72.png</filename>
+        <filename>/images/favicon/apple-touch-icon-76x76.png</filename>
+        <filename>/images/favicon/favicon-128.png</filename>
+        <filename>/images/favicon/favicon-16x16.png</filename>
+        <filename>/images/favicon/favicon-196x196.png</filename>
+        <filename>/images/favicon/favicon-32x32.png</filename>
+        <filename>/images/favicon/favicon-96x96.png</filename>
+        <filename>/images/favicon/favicon.ico</filename>
+        <filename>/images/favicon/index.php</filename>
+        <filename>/images/favicon/mstile-144x144.png</filename>
+        <filename>/images/favicon/mstile-150x150.png</filename>
+        <filename>/images/favicon/mstile-310x150.png</filename>
+        <filename>/images/favicon/mstile-310x310.png</filename>
+        <filename>/images/favicon/mstile-70x70.png</filename>
+        <filename>/images/header.php</filename>
+        <filename>/images/index.html</filename>
+        <filename>/images/lines.php</filename>
+        <filename>/index.html</filename>
+        <filename>/index.php</filename>
+        <filename>/offline.php</filename>
+        <filename>/README.txt</filename>
+        <filename>/template_thumbnail.png</filename>
 	</files>
 	<positions>
+		<position>sidebar</position>		
 		<position>header</position>
 		<position>left</position>
 		<position>left2</position>
@@ -61,57 +73,84 @@
 		<position>background</position>
 		<position>style</position>
 	</positions>
-	<params addpath="/templates/LOT/elements">
-		<param type="spacer" default="Template Structure" />
-		<param name="header" type="radio" label="Show Header" deafult="1" description="Show/Hide header.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="left" type="radio" label="Show Left" deafult="1" description="Show/Hide Left.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="left2" type="radio" label="Enable Left2" deafult="1" description="Show/Hide Left2.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="fluid_left" type="radio" label="Fluid layout for Left" deafult="0" description="Apply fluid layout on Left.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="top" type="radio" label="Show Top" deafult="1" description="Show/Hide Top.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="bottom" type="radio" label="Show Bottom" deafult="1" description="Show/Hide Bottom.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="right" type="radio" label="Show Right" deafult="1" description="Show/Hide Right.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="right2" type="radio" label="Enable Right2" deafult="1" description="Show/Hide Right2.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="fluid_right" type="radio" label="Fluid layout for Right" deafult="0" description="Apply fluid layout on Right.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="footer" type="radio" label="Show Footer" deafult="1" description="Show/Hide Footer.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param type="spacer" default="Advanced parameters" />
-		<param name="dynamic_css" type="radio" label="Enable Dynamic CSS" deafult="0" description="Enable/Disable a special CSS with server-side calculation.">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param> 
-		<param name="background" type="radio" label="Enable background position" deafult="0" description="Enable/Disable a background module position">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param> 
-	</params>
-</install>
+	<config>
+		<fields name="params">
+			<fieldset name="structure" label="Template Structure">							
+    			<field name="sidebar" type="radio" label="Show Sidebar" deafult="1" description="Show/Hide sidebar.">					      
+        			 <option value="1">yes</option>
+        			 <option value="0">no</option>
+                </field>
+				<field name="header" type="radio" label="Show Header" deafult="1" description="Show/Hide header.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-header" type="text" label="Class for Header" description="Custom class for container."></field>
+				<field name="class-body" type="text" label="Class for Body" description="Custom class for container."></field>
+				<field name="left" type="radio" label="Show Left" deafult="1" description="Show/Hide Left.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="before-header" type="textarea" label="Html before header" description="Custom html for container." filter="raw"></field>
+				<field name="after-header" type="textarea" label="Html after header" description="Custom html for container." filter="raw"></field> 
+				<field name="before-body" type="textarea" label="Html before body" description="Custom html for container." filter="raw"></field>
+				<field name="after-body" type="textarea" label="Html after body" description="Custom html for container." filter="raw"></field> 
+				<field name="class-left" type="text" label="Class for Left" description="Custom class for container."></field>
+				<field name="left2" type="radio" label="Enable Left2" deafult="1" description="Show/Hide Left2.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-left2" type="text" label="Class for Left2" description="Custom class for container."></field>
+				<field name="fluid_left" type="radio" label="Fluid layout for Left" deafult="0" description="Apply fluid layout on Left.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-center" type="text" label="Class for Center" description="Custom class for container."></field>
+				<field name="top" type="radio" label="Show Top" deafult="1" description="Show/Hide Top.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-top" type="text" label="Class for Top" description="Custom class for container."></field>
+				<field name="before-top" type="textarea" label="Html before top" description="Custom html for container." filter="raw"></field>
+				<field name="after-top" type="textarea" label="Html after top" description="Custom html for container." filter="raw"></field>
+				<field name="bottom" type="radio" label="Show Bottom" deafult="1" description="Show/Hide Bottom.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-bottom" type="text" label="Class for Bottom" description="Custom class for container."></field>
+				<field name="before-bottom" type="textarea" label="Html before bottom" description="Custom html for container." filter="raw"></field>
+				<field name="after-bottom" type="textarea" label="Html after bottom" description="Custom html for container." filter="raw"></field>
+				<field name="right" type="radio" label="Show Right" deafult="1" description="Show/Hide Right.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-right" type="text" label="Class for Right" description="Custom class for container."></field>
+				<field name="right2" type="radio" label="Enable Right2" deafult="1" description="Show/Hide Right2.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="fluid_right" type="radio" label="Fluid layout for Right" deafult="0" description="Apply fluid layout on Right.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="footer" type="radio" label="Show Footer" deafult="1" description="Show/Hide Footer.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field>
+				<field name="class-footer" type="text" label="Class for Footer" description="Custom class for container."></field>
+				<field name="before-footer" type="textarea" label="Html before Footer" description="Custom html for container." filter="raw"></field>
+				<field name="after-footer" type="textarea" label="Html after Footer" description="Custom html for container." filter="raw"></field>
+			</fieldset>				
+			<fieldset name="advanced" label="Advanced parameters">
+				<field name="dynamic_css" type="radio" label="Enable Dynamic CSS" deafult="0" description="Enable/Disable a special CSS with server-side calculation.">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field> 
+				<field name="background" type="radio" label="Enable background position" deafult="0" description="Enable/Disable a background module position">
+					<option value="1">yes</option>
+					<option value="0">no</option>
+				</field> 
+			</fieldset>
+		</fields>
+	</config>
+</extension>
 

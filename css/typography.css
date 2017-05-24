@@ -1,25 +1,12 @@
-@font-face {
-    font-family: 'TitilliumText22LRegular';
-    src: url('../fonts/TitilliumText22L003-webfont.eot');
-    src: url('../fonts/TitilliumText22L003-webfont.eot?iefix') format('eot'),
-         url('../fonts/TitilliumText22L003-webfont.woff') format('woff'),
-         url('../fonts/TitilliumText22L003-webfont.ttf') format('truetype'),
-         url('../fonts/TitilliumText22L003-webfont.svg#webfontiXtJn0Qu') format('svg');
-    font-weight: normal;
-    font-style: normal;
+body {font-size: 16px; line-height: 150%; font-weight:400; font-family: Montserrat, Roboto, 'Helvetica Neue', sans-serif; color:#565a5c; background-color:#f9f9f9;}
+h1,h2,h3,h4   { color:#000; font-weight: 700;}
 
-}
+h1 {margin-top:40px; margin-bottom:40px}
+h2 {margin-top:25px; margin-bottom:25px}
 
-@font-face {
-    font-family: 'TitilliumText22LBold';
-    src: url('../fonts/TitilliumText22L005-webfont.eot');
-    src: url('../fonts/TitilliumText22L005-webfont.eot?iefix') format('eot'),
-         url('../fonts/TitilliumText22L005-webfont.woff') format('woff'),
-         url('../fonts/TitilliumText22L005-webfont.ttf') format('truetype'),
-         url('../fonts/TitilliumText22L005-webfont.svg#webfontZL0yA7s8') format('svg');
-    font-weight: normal;
-    font-style: normal;
+#lot_footer, #lot_footer a {color:#fff;}
 
-}
+#lot_footer .menu-footer a {color:#fff; font-weight:700; text-transform: uppercase; }
+#lot_footer .menu-footer a:hover {text-decoration: underline}
 
-body { font:11px/15px 'TitilliumText22LRegular',Verdana,sans; }
+#lot_footer h3 {color:#fff; font-size:16px;font-weight:700;margin-bottom:8px; margin-top:0; text-transform: uppercase;}
