@@ -1,47 +1,62 @@
-body,html{overflow-x:hidden;margin:0;padding:0;height:100%}
+#lot_message {}
+
+#lot_container {}
 
 
-a {color:#379B00;}
-a:hover {color:#9cd722;}
+#lot_header{}
 
-img.embed-responsive-item {object-fit: cover;}
-
-.btn.btn-primary { background-color:#9cd722; border-color:#9cd722; color:#fff;border-radius:4px;}
-.btn.btn-primary:hover {background-color:#379B00; border-color:#379B00; text-decoration: none}
-
-.btn.btn-default { color:#fff; background-color: #818181; border-color: #818181}
-.btn.btn-default:hover, .btn.btn-default:focus { background-color: #999999; border-color: #999999}
+#lot_body{}
 
 
-#lot_container {height:100%;}
+#lot_left, #lot_center, #lot_right {float:left;}
+#lot_left{}
+#lot_left #lot_left1, #lot_left #lot_left2 {float:left}
+#lot_left #lot_left1{}
+#lot_left #lot_left2{}
 
-#lot_header{background-color:#9cd722; width:100%;overflow:hidden;min-height: 64px;}
+#lot_center{}
 
-#lot_header .navbar {
-    height:64px; 
-    padding:2px 0; 
-    background-color:#9cd722; 
-    border:0; 
-    margin-bottom:0;
-     
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
 
-#lot_header .navbar-brand { padding:0; line-height: 0; }
+#lot_top{}
 
-#lot_body { padding-bottom:350px; min-height: 100%; margin-top:-64px; padding-top:64px; } /*lot_footer min-height*/
+#lot_content{}
 
-#lot_footer {
-    padding-top: 40px;
-    padding-bottom:20px;
-    background-color: #9cd722;
-	background-repeat: repeat;
-	background-position: top center;
-    min-height:300px; 
-    margin-top:-300px;
-}
-#lot_footer .menu-footer a {padding:0; }
-#lot_footer .menu-footer li:hover {background-color:none}
+#lot_bottom{}
+
+
+
+#lot_right{}
+#lot_right #lot_right1, #lot_right #lot_right2 {float:left}
+#lot_right #lot_right1{}
+#lot_right #lot_right2{}
+
+
+#lot_footer{}
+
+
+#lot_debug {}
+
+
+
+#lot_container { background-color:#000000; width:800px;height:800px;padding:20px;}
+
+#lot_header{background-color:#ff0000; width:100%; height:15%}
+#lot_body{background-color:#ff3030; width:100%; height:70%}
+#lot_footer{background-color:#ff5050; width:100%; height:15%}
+
+
+#lot_left{background-color:#00ff00; width:15%;height:100%;}
+#lot_left1{border:3px dotted #fff; width:45%;height:100%;}
+#lot_left2{border:3px dotted #000; width:45%;height:100%;}
+
+#lot_center{background-color:#30ff30; width:70%;height:100%;}
+
+#lot_right{background-color:#50ff50; width:15%;height:100%;}
+#lot_right1{border:3px dotted #fff; width:45%;height:100%;}
+#lot_right2{border:3px dotted #000; width:45%;height:100%;}
+
+#lot_top{background-color:#0000ff; width:100%;height:15%;}
+#lot_content{background-color:#3030ff; width:100%;height:70%;}
+#lot_bottom{background-color:#5050ff; width:100%;height:15%;}
+
+
