@@ -41,7 +41,7 @@ JFactory::getDocument()->addScriptDeclaration("
 <?php if( $this->params->get( 'dynamic_css' )): ?>
 	<link rel="stylesheet" href="<?php echo $path ?>/css/dynamic.css" type="text/css" media="all"/>
 	<?php endif;
-@include $full_path.'/favicon/index.php';
+@include $full_path.'/images/favicon/index.php';
 if ($this->countModules('style')) :?>
 	<style type="text/css">
 		<jdoc:include type="modules" name="style" style="contentonly"/>
