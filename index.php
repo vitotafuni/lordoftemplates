@@ -31,7 +31,6 @@ JFactory::getDocument()->addScriptDeclaration("
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  type="text/css" media="all"/>
 	<jdoc:include type="lotcss" />
 	
-	<link rel="stylesheet" href="https://fonts.typotheque.com/WF-022445-009816.css" type="text/css" />
 	
 <?php if( ($sidebar=$this->params->get( 'sidebar' )) ): ?>
 	<link rel="stylesheet" href="<?php echo $path ?>/css/sidebar.css"  type="text/css" media="all"/>
