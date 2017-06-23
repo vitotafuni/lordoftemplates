@@ -12,7 +12,6 @@
 	<description>this template for Joomla 2.5 is made by Vito Tafuni at Tapecode</description>
 	<files>
 		<filename>/component.php</filename>
-        <filename>/css</filename>
         <filename>/css/.htaccess</filename>
         <filename>/css/dynamic.php</filename>
         <filename>/css/index.html</filename>
