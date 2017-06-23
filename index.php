@@ -25,6 +25,15 @@ JFactory::getDocument()->addScriptDeclaration("
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<?php	if( ($addrbarcol=$this->params->get('addresbarcolor')) ): ?>
+	<!-- Address bar color - Android -->
+	<meta name="theme-color" content="<?php echo $addrbarcol;?>" />
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="<?php echo $addrbarcol;?>">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<?php 	endif; ?>
 	<jdoc:include type="lothead" />
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  type="text/css" media="all"/>

@@ -141,6 +141,7 @@
 				<field name="after-footer" type="textarea" label="Html after Footer" description="Custom html for container." filter="raw"></field>
 			</fieldset>				
 			<fieldset name="advanced" label="Advanced parameters">
+				<field name="addresbarcolor" type="text" label="Addressbar Color" default="" description="Color for addressbar on mobile browsers"></field>
 				<field name="dynamic_css" type="radio" label="Enable Dynamic CSS" deafult="0" description="Enable/Disable a special CSS with server-side calculation.">
 					<option value="1">yes</option>
 					<option value="0">no</option>
