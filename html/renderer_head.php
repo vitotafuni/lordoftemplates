@@ -1,41 +1,43 @@
 <?php
 /**
- * @package     Joomla.Platform
- * @subpackage  Document
+ * Joomla! Content Management System
  *
- * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE
+ * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_PLATFORM') or die;
 
+use Joomla\CMS\Document\DocumentRenderer;
+use Joomla\CMS\Helper\TagsHelper;
+use Joomla\CMS\Uri\Uri;
 use Joomla\Utilities\ArrayHelper;
 
 class JDocumentRendererHtmlLothead extends JDocumentRendererHtmlHead
 {
 	public function fetchHead($document)
 	{
-    	// Convert the tagids to titles
+    // Convert the tagids to titles
 		if (isset($document->_metaTags['name']['tags']))
 		{
-			$tagsHelper = new JHelperTags;
+			$tagsHelper = new TagsHelper;
 			$document->_metaTags['name']['tags'] = implode(', ', $tagsHelper->getTagNames($document->_metaTags['name']['tags']));
 		}
 
-        if ($document->getScriptOptions())
+		if ($document->getScriptOptions())
 		{
-			JHtml::_('behavior.core');
+			\JHtml::_('behavior.core');
 		}
-		
+
 		// Trigger the onBeforeCompileHead event
-		$app = JFactory::getApplication();
+		$app = \JFactory::getApplication();
 		$app->triggerEvent('onBeforeCompileHead');
 
 		// Get line endings
-		$lnEnd  = $document->_getLineEnd();
-		$tab    = $document->_getTab();
-		$tagEnd = ' />';
-		$buffer = '';
+		$lnEnd        = $document->_getLineEnd();
+		$tab          = $document->_getTab();
+		$tagEnd       = ' />';
+		$buffer       = '';
 		$mediaVersion = $document->getMediaVersion();
 
 		// Generate charset when using HTML5 (should happen first)
@@ -63,7 +65,17 @@ class JDocumentRendererHtmlLothead extends JDocumentRendererHtmlHead
 				}
 				elseif ($type != 'http-equiv' && !empty($content))
 				{
-					$buffer .= $tab . '<meta ' . $type . '="' . $name . '" content="' . htmlspecialchars($content, ENT_COMPAT, 'UTF-8') . '" />' . $lnEnd;
+					if (is_array($content))
+					{
+						foreach ($content as $value)
+						{
+							$buffer .= $tab . '<meta ' . $type . '="' . $name . '" content="' . htmlspecialchars($value, ENT_COMPAT, 'UTF-8') . '" />' . $lnEnd;
+						}
+					}
+					else
+					{
+						$buffer .= $tab . '<meta ' . $type . '="' . $name . '" content="' . htmlspecialchars($content, ENT_COMPAT, 'UTF-8') . '" />' . $lnEnd;
+					}
 				}
 			}
 		}
@@ -102,36 +114,36 @@ class JDocumentRendererHtmlLothead extends JDocumentRendererHtmlHead
 			$buffer .= ' />' . $lnEnd;
 		}
 
-        // Output the custom tags - array_unique makes sure that we don't output the same tags twice
+    // Output the custom tags - array_unique makes sure that we don't output the same tags twice
 		foreach (array_unique($document->_custom) as $custom)
 		{
 			$buffer .= $tab . $custom . $lnEnd;
 		}
 
 		return ltrim($buffer, $tab);
-    }
+  }
 }
 
 class JDocumentRendererHtmlLotcss extends JDocumentRendererHtmlHead
 {
 	public function fetchHead($document)
 	{
-    	// Trigger the onBeforeCompileHead event
-		$app = JFactory::getApplication();
+    // Trigger the onBeforeCompileHead event
+		$app = \JFactory::getApplication();
 		$app->triggerEvent('onBeforeCompileHead');
 
 		// Get line endings
-		$lnEnd  = $document->_getLineEnd();
-		$tab    = $document->_getTab();
-		$tagEnd = ' />';
-		$buffer = '';
+		$lnEnd        = $document->_getLineEnd();
+		$tab          = $document->_getTab();
+		$tagEnd       = ' />';
+		$buffer       = '';
 		$mediaVersion = $document->getMediaVersion();
 		
 		$JUriRoot = JURI::root(true);
         unset($document->_styleSheets[$JUriRoot . '/media/system/css/modal.css']);
         unset($document->_styleSheets[$JUriRoot . '/media/jui/css/chosen.css']);
         
-    	$defaultCssMimes = array('text/css');
+    $defaultCssMimes = array('text/css');
 
 		// Generate stylesheet links
 		foreach ($document->_styleSheets as $src => $attribs)
@@ -234,15 +246,15 @@ class JDocumentRendererHtmlLotjs extends JDocumentRendererHtmlHead
 {
 	public function fetchHead($document)
 	{
-    	// Trigger the onBeforeCompileHead event
-		$app = JFactory::getApplication();
+    // Trigger the onBeforeCompileHead event
+		$app = \JFactory::getApplication();
 		$app->triggerEvent('onBeforeCompileHead');
 
 		// Get line endings
-		$lnEnd  = $document->_getLineEnd();
-		$tab    = $document->_getTab();
-		$tagEnd = ' />';
-		$buffer = '';
+		$lnEnd        = $document->_getLineEnd();
+		$tab          = $document->_getTab();
+		$tagEnd       = ' />';
+		$buffer       = '';
 		$mediaVersion = $document->getMediaVersion();
 		
 		$JUriRoot = JURI::root(true);
@@ -250,17 +262,33 @@ class JDocumentRendererHtmlLotjs extends JDocumentRendererHtmlHead
         unset($document->_scripts[$JUriRoot . '/media/jui/js/chosen.jquery.min.js']);
         unset($document->_scripts[$JUriRoot . '/media/jui/js/jquery-noconflict.js']);
         unset($document->_scripts[$JUriRoot . '/media/jui/js/jquery-migrate.min.js']);
+        unset($document->_scripts[$JUriRoot . '/media/jui/js/bootstrap.min.js']);
         unset($document->_scripts[$JUriRoot . '/media/system/js/modal.js']);
         unset($document->_scripts[$JUriRoot . '/media/system/js/validate.js']);
         unset($document->_scripts[$JUriRoot . '/media/system/js/punycode.js']);
         unset($document->_scripts[$JUriRoot . '/media/system/js/caption.js']);
-        unset($document->_scripts[$JUriRoot . '/media/system/js/core.js']);
+        //unset($document->_scripts[$JUriRoot . '/media/system/js/core.js']);
         unset($document->_scripts[$JUriRoot . '/media/system/js/mootools-core.js']);
         unset($document->_scripts[$JUriRoot . '/media/system/js/mootools-more.js']);
 
 
-    	$defaultJsMimes = array('text/javascript', 'application/javascript', 'text/x-javascript', 'application/x-javascript');
-        $html5NoValueAttributes = array('defer', 'async');
+    // Generate scripts options
+		$scriptOptions = $document->getScriptOptions();
+
+		if (!empty($scriptOptions))
+		{
+			$buffer .= $tab . '<script type="application/json" class="joomla-script-options new">';
+
+			$prettyPrint = (JDEBUG && defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : false);
+			$jsonOptions = json_encode($scriptOptions, $prettyPrint);
+			$jsonOptions = $jsonOptions ? $jsonOptions : '{}';
+
+			$buffer .= $jsonOptions;
+			$buffer .= '</script>' . $lnEnd;
+		}
+
+		$defaultJsMimes         = array('text/javascript', 'application/javascript', 'text/x-javascript', 'application/x-javascript');
+		$html5NoValueAttributes = array('defer', 'async');
 
 		// Generate script file links
 		foreach ($document->_scripts as $src => $attribs)
@@ -370,6 +398,5 @@ class JDocumentRendererHtmlLotjs extends JDocumentRendererHtmlHead
 		}
 		
 		return ltrim($buffer, $tab);
-
-    }
+  }
 }
