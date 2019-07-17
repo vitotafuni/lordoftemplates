@@ -31,7 +31,7 @@ function modChrome_bootstrap_modmenu($module, &$params, &$attribs) { ?>
 				<h3><?php echo $module->title; ?></h3>
         <?php endif; ?>
 		<?php echo $module->content; ?>
-    </div><?
+    </div><?php
 }
 
 function modChrome_lotxhtml($module, &$params, &$attribs)
